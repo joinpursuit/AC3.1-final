@@ -47,12 +47,10 @@ describe('JavaScript fundamentals final:', () => {
     expect(test2).eql(['goodbye', 'cya']);
   });
   it('halfsies() ', () => {
-    var test1 = halfsies([100, 100, 100, 100]);
-    var test2 = halfsies([50, 40, 33, 6, 12]);
-    var test3 = halfsies([-10, 33, 10]);
-    expect(test1).eql([10, 10, 1000, 1000]);
-    expect(test2).eql([50, 40, 33, 6, 12]);
-    expect(test3).eql([-100, 33, 100]);
+    var test1 = halfsies([10,10,10,10,100,100,100,100]);
+    var test2 = halfsies([10,10,10,10,3,100,100,100,100]);
+    expect(test1).eql([1, 1, 1, 1,1000,1000,1000,1000]);
+    expect(test2).eql([1, 1, 1, 1,3,1000,1000,1000,1000]);
   });
   it('leet() ', () => {
     var test1 = leet('leet test');
