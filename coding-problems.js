@@ -93,7 +93,9 @@ const oddNumStrs = (arr) => {
     </body>
 </html>`
 
-const changeBearPig = () => null;
+const changeBearPig = () => {
+  document.getElementById('text1').innerHTML = "changeBearPig"
+};
 
 /////
 //#8
