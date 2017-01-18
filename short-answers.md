@@ -9,7 +9,7 @@ Global variable increase the chance for variable names to collide. It reduces av
 1. What is closure? Give an example of where closure is used in JavaScript.
 Answer:
 
-A closure is an object that preserves the value of variables declared within it. It also isolates those variables to only be accessible via methods returned by the closure.
+A closure preserves the value of variables declared within it. It also isolates those variables to only be accessible via methods returned by the closure.
 
 1. What is scope? When is new scope created in JavaScript?
 Answer:
