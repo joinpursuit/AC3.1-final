@@ -108,8 +108,16 @@ function changeBearPig () {
 //For each number in the array, if the number is in the first half of the array, divide it by ten
 //if the number in the second half of the array, multiply it by ten.
 //If it's exactly in the middle, leave the number alone. You should return a new array.
-const halfsies = () => null;
-
+// const halfsies = () => null;
+function halfsies (arr) {
+  arr.forEach(function(e, idx) {
+    if(e.length -1 !== e.length-2){
+      e / 10
+    } else {
+      e * 10
+    }
+  })
+}
 /////
 //#9
 //Write a function called `leet` that takes in a string and returns a new string that 
