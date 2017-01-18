@@ -48,8 +48,8 @@ describe('JavaScript fundamentals final:', () => {
   });
   it('halfsies() ', () => {
     var test1 = halfsies([100, 100, 100, 100]);
-    var test2 = halfsies([50, 40, 33, 6, 12]);
-    var test3 = halfsies([-10, 33, 10]);
+    var test2 = halfsies([5, 4, 33, 6, 12]);
+    var test3 = halfsies([-1, 33, 10]);
     expect(test1).eql([10, 10, 1000, 1000]);
     expect(test2).eql([50, 40, 33, 6, 12]);
     expect(test3).eql([-100, 33, 100]);
