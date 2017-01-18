@@ -5,17 +5,36 @@
 /////
 //#1
 //Write a function called `sumArray` that takes in an array (that could contain any type of data) and returns a sum of the numbers in the array.
-const sumArray = () => null;
+const sumArray = (arr) =>
+  arr.reduce(function () {
+    if(typeof(arr[i]) === "number") {
+      return [].push(arr[i])
+    }
+  })
+
 
 /////
 //#2
 //Write a function called `sumAll` that takes in any amount of numbers (not in an array), and returns a sum of all of the numbers
-const sumAll = () => null;
+const sumAll = (a) =>
+  let total = 0
+  for(var i = 0; i <= a.length; i++){
+    total.push(a)
+  }
+  return return total;
+
+
 
 /////
 //#3
 // Write a function called 'squaredTimesTen' that takes in array (that could contain any type of data), squares the numbers and multiples them by 10, and returns a new array of those numbers
-const squaredTimesTen = () => null;
+const squaredTimesTen = (arr) =>
+  if (typeof(arr[i]) === "number"){
+    return [].push((arr[i] * 2) * 10)
+  }
+
+
+
 
 /////
 //#4
@@ -25,12 +44,26 @@ const highLow = () => null;
 /////
 //#5
 //Write a function called `indexMap` that takes in an array of numbers and returns a new array with each of the original numbers multiplied by their array index.
-const indexMap = () => null;
+ const indexMap = (arr) =>
+   arr.map(function () {
+     return [].push(arr(i) x arr[i])
+   })
+
+
 
 /////
 //#6
 //Write a function `oddNumStrs` that receives an array of strings and numbers and returns an array that only contains the strings from the original array that have an odd number of letters.
-const oddNumStrs = () => null;
+// const oddNumStrs = () => null;
+function oddNumStrs(arr){
+  var newArray = []
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i].length % 2 !== 0 && typeof(arr[i]) === "string") {
+      newArray.push(arr[i])
+    }
+  }
+    return newArray;
+}
 
 /////
 //#7
@@ -50,7 +83,13 @@ const oddNumStrs = () => null;
     </body>
 </html>`
 
-const changeBearPig = () => null;
+/////
+function changeBearPig (title){
+  if(id && "text1" === Dog){
+    return Dog.replaceWith("ManBearPig")
+
+  }
+}
 
 /////
 //#8
@@ -63,8 +102,17 @@ const halfsies = () => null;
 /////
 //#9
 //Write a function called `leet` that takes in a string and returns a new string that replaces all e's with 3's, l's with 1's, and t's with 7's
-const leet = () => null;
-
+const leet = (str) =>
+ let newStr= " ";
+  for(var i = 0; i <= str.length; i++){
+    if(str[i] === "e"){
+        return str[i].slice(1,(newStr.push("3"))
+    } if(str[i] === "l"){
+        return str[i].slice(1,(newStr.push("1"))
+    } if(str[i] === "t"){
+        return str[i].slice(1,(newStr.push("7"))
+  }
+}
 /////
 //#10
 //Write a constructor function called `Song` for creating 'Song' objects
@@ -72,6 +120,14 @@ const leet = () => null;
 //as well as a 'play' prototype method that should return a string that says 'Now playing' with the name and artist of the song
 
 function Song(){
+  this.artist = artist;
+  this.title = title;
+  this.year = year;
+}
+
+Song.Prototype.Play = function(){
+  return ("Now playing " + this.title + "by " + this.artist + " !")
+}
 
 };
 
@@ -82,8 +138,19 @@ function Song(){
 //It should also have an `addSong` prototype method that takes in a song object as an argument, and adds it to the album's song array.
 //Lastly, it should have a 'tracklist' prototype method that should return a single string with a title of all of the songs, separated by a comma and a space
 function Album(){
+  this.artist = artist;
+  this.title = title;
+  this.year = year;
+  this.playlist = [];
+}
 
+Album.Prototype.addSong = function ({song}){
+  this.playlist.push({song})
 };
+
+Album.Prototype.tracklist = function (){
+  return this.playlist.title + ' , ';
+}
 
 /////
 //#12
