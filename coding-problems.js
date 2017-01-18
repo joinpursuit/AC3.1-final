@@ -46,11 +46,16 @@ squaredTimesTen([1,2,3,3,4,5,6,7])
 //#4
 //Write a function called 'highLow' that takes in an array of numbers and returns an object with 
 // both the highest and lowest number from the array
-const highLow = () => null;
-// function highlow (arr) {
-//     var obj = {}
-//     arr.sort()
-// }
+// const highLow = () => null;
+function highlow (arr) {
+    var obj = {}
+    for(var i = 0; i < arr.length; i++) {
+      var keys = Object.keys(obj)
+      if(keys.arr[i] > arr[i]) {
+          obj[i] 
+      } 
+    }
+}
 
 /////
 //#5
@@ -143,10 +148,16 @@ function leet (str) {
 //#10
 //Write a constructor function called `Song` for creating 'Song' objects
 //Each song should have an artist, title, and year property
-//as well as a 'play' prototype method that should return a string that says 'Now playing' with the name and artist of the song
+//as well as a 'play' prototype method that should return a string that says 'Now playing' 
+//with the name and artist of the song
 
-function Song(){
-   
+function Song(artist, title, year){
+   this.artist = artist;
+   this.title = title;
+   this.year = year;
+   this.play = function () {
+      console.log('Now playing', this.name, this.artist)
+   }
 };
 
 /////
