@@ -15,7 +15,7 @@ Answer:
 
 1. What are the pros and cons of using Promises instead of callbacks?
 Answer:
-  
+  Get back to me on this one.
 
 1. What happens when you type a URL into a browser and hit enter?
 Answer:
