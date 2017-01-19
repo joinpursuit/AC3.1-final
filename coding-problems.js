@@ -18,12 +18,12 @@ const sumArray = (arr) => {
 /////
 //#2
 //Write a function called `sumAll` that takes in any amount of numbers (not in an array), and returns a sum of all of the numbers
-const sumAll = (arguments) => {
+const sumAll = (...args) => {
   let counter = 0;
-  for(var i = 0; i < arguments.length; i++) {
-    counter += arguments[i]
-  }
-  return counter
+  args.forEach((num) => {
+    counter += num
+  })
+  return counter;
 };
 
 /////
@@ -93,7 +93,8 @@ const oddNumStrs = (arr) => {
 </html>`
 
 const changeBearPig = () => {
-
+  let target = document.getElementById('text1')
+  target.innerHTML = 'ManBearPig'
 };
 
 /////
@@ -209,12 +210,10 @@ const oddsAndEvens = (arr) => {
 //Do NOT use the built in .reverse method
 const palindrome = (str) => {
   let testStr = str.split('')
-  console.log('testStr',testStr)
   for(var i = 0; i < testStr.length; i++) {
     for(var j = testStr.length - 1; j > 0; j--) {
       if(testStr[i] === testStr[j]) {
-        console.log(testStr[i], testStr[j])
-        j--
+        i++
       } else {
         return false
       }
@@ -231,8 +230,8 @@ const palindrome = (str) => {
 const anagram = (str1, str2) => {
   let output1 = {};
   let output2 = {};
-  str1 = str1.split('')
-  str2 = str2.split('')
+  str1 = str1.split(' ').join('').split('')
+  str2 = str2.split(' ').join('').split('')
 
   for(var i = 0; i < str1.length; i++) {
     if(str1.length !== str2.length) {
@@ -252,14 +251,12 @@ const anagram = (str1, str2) => {
     }
   }
 
-  if(output1 == output2) {
-    return true
+  for(var key in output1) {
+    if(output1[key] !== output2[key]) {
+      return false
+    }
   }
-  else {
-    return false
-  }
-
-
+  return true
 };
 
 
