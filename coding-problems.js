@@ -5,27 +5,126 @@
 /////
 //#1
 //Write a function called `sumArray` that takes in an array (that could contain any type of data) and returns a sum of the numbers in the array.
-const sumArray = () => null;
+// const sumArray = () => null;
+
+function sumArray (arr){
+  for(var x = 0;x< arr.length;x++){
+   if(typeof(x) === !number){
+     arr.slice(x)
+   }
+
+  }
+  arr.reduce(function(a,b){
+    a + b
+  })
+  return arr
+}
+
 
 /////
 //#2
 //Write a function called `sumAll` that takes in any amount of numbers (not in an array), and returns a sum of all of the numbers
-const sumAll = () => null;
+// const sumAll = () => null;
+
+// function sumAll (arg) {
+//      arg.map(function(a,b)
+//       a +b 
+//       )
+//      return arg
+// }
+
+// function sumAll (num){
+//   var output = 0
+//   for(var x = 0;x < num.legnth;num++){
+//        output += x
+//   }
+//   return output
+// }
+
+
+ function sumAll(){
+  var sum = 0;
+ for(var i = 0; i < arguments.length; i++){
+     sum += arguments[i]
+   }
+   return sum;
+ }
 
 /////
 //#3
 // Write a function called 'squaredTimesTen' that takes in array (that could contain any type of data), squares the numbers and multiples them by 10, and returns a new array of those numbers
-const squaredTimesTen = () => null;
+// const squaredTimesTen = () => null;
+
+// var squaredTimesTen = function (agr){
+//   for(var x = 0;x > agr.length; x++){
+//      if(typeof(x) === 'string' )
+//       agr.filter(x)
+//   }
+
+//   agr.forEach(function(a,b){
+//      a * b
+    
+//   }
+//      )
+//    return agr
+// }
+
+ let squaredTimesTen = (arr) => {
+   let output = [];
+   arr.forEach((val) => {
+     if(typeof val === 'number') {
+       output.push((val**2) * 10)
+     }
+   })
+   return output
+ } 
+ 
+ squaredTimesTen([10, 10])
+
+
 
 /////
 //#4
 //Write a function called 'highLow' that takes in an array of numbers and returns an object with both the highest and lowest number from the array
-const highLow = () => null;
+// const highLow = () => null;
+
+// function highLow (arr){
+//  var output = {
+//    high:0,
+//      low:0
+//      }
+//  for(var x =0;x < arr.legnth;x++){
+//     if(arr[x] > arr[x + 1]){
+//       output.push(arr[x] = high : arr[x])
+
+//     } else {
+//       output.push(arr[x] = low: arr[x + 1])
+//     }
+//  }
+//    return output
+// }
+
+function highLow (arr){
+   let output = {};
+  output["high"] = Math.max(...arr);
+  output["low"] = Math.min(...arr);
+   return output;
+ }
+
+
 
 /////
 //#5
 //Write a function called `indexMap` that takes in an array of numbers and returns a new array with each of the original numbers multiplied by their array index.
-const indexMap = () => null;
+// const indexMap = () => null;
+
+function indexMap =arr => 
+   arr.map(ele,idx){
+     ele * idx
+    }
+  
+
+
 
 /////
 //#6
@@ -50,7 +149,10 @@ const oddNumStrs = () => null;
     </body>
 </html>`
 
-const changeBearPig = () => null;
+const changeBearPig = () => 
+   var newWord = document.getElementsByTagName('text1')
+   return newWord.setAttribute('changeBearPig')
+;
 
 /////
 //#8
@@ -63,7 +165,17 @@ const halfsies = () => null;
 /////
 //#9
 //Write a function called `leet` that takes in a string and returns a new string that replaces all e's with 3's, l's with 1's, and t's with 7's
-const leet = () => null;
+function leet (str) {
+  var newWord = str.split('')
+   for(var x = 0; x < newWord.length; x++){
+      if(x === 'e'){
+        newWord.indexof(x) = 3
+      } else (x === 'l'){
+        newWord.indexof(x) = 7
+      }
+   }
+   return newWord
+} 
 
 /////
 //#10
@@ -71,32 +183,64 @@ const leet = () => null;
 //Each song should have an artist, title, and year property
 //as well as a 'play' prototype method that should return a string that says 'Now playing' with the name and artist of the song
 
-function Song(){
+function Song (artist, title, year){
+  this.artist = artist,
+  this.title =title,
+  this.year = year
+}
 
-};
 
+Song.protoType.play(function()){
+   return 'Now playing' + this.title + 'by' + this.artist
+}
 /////
 //#11
 //Write a constructor function called `Album` for creating 'Album' objects.
 //Each album should have an artist, title, and year property, and an array to hold songs (which should initially start out empty).
 //It should also have an `addSong` prototype method that takes in a song object as an argument, and adds it to the album's song array.
 //Lastly, it should have a 'tracklist' prototype method that should return a single string with a title of all of the songs, separated by a comma and a space
-function Album(){
+function Album (artist, title, year,song){
+  this.artist = artist,
+  this.title =title,
+  this.year = year,
+  this.song = {}
+}
 
-};
+
+Album.protoType.addSong(function(song){
+   return this.song.push(song)
+})
+
+
+Album.protoType.tracklist(function(song)){
+   this.song.map(function(e){
+     return e +', '
+   })
+}
 
 /////
 //#12
 //Write a function called 'oddsAndEvens' that takes in an array of numbers and returns an object with a count of the number of odd and even numbers in the original array
-const oddsAndEvens = () => null;
+function oddsAndEvens(arr, oddEven={odds: 0, evens: 0}) {
+  for(let i = 0; i < arr.length; i++) {
+    arr[i] % 2 === 0 ? oddEven.evens += 1 : oddEven.odds += 1
+  }
+  return oddEven
+ }
 
 /////
 //#13
 //Write a function called 'palindrome' that takes in a string and returns true if it's a palindrome, and false if not
 //(a palindrome is a word that reads the same both backwards and forwards)
 //Do NOT use the built in .reverse method
-const palindrome = () => null;
-
+ function palindrome(str) {
+ let reversed = "";
+   for(let i=str.length-1; i >= 0; i--) {
+   newWORD += str[i]
+  }
+  return newWORD === str;
+ }
+     
 /////
 //#14
 //Write a function called 'anagram' that takes in two strings and returns true if they are anagrams of each other, and false if not
