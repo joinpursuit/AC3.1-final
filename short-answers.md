@@ -5,10 +5,12 @@ For the following five questions, type out your answers in 1-2 paragraphs (no co
 Answer: This is a bad practice because if you have a variable with the same name it can be overwritten once you run your program.
 
 1. What is closure? Give an example of where closure is used in JavaScript.
+Answer: closure is when you can access a variable from within a given function.
 Answer: 
 
 1. What is scope? When is new scope created in JavaScript?
-Answer: Scope is when you can access a variable from within a given function.
+
+// global and local scope. created 
 
 1. What are the pros and cons of using Promises instead of callbacks?
 Answer: Promises are better than callbacks because you tell your program what to do next by using .then, or if there is an error, you can use .catch

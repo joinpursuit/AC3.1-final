@@ -33,33 +33,53 @@ function sumArray (arr){
 //      return arg
 // }
 
-function sumAll (num){
-  var output = 0
-  for(var x = 0;x < num.legnth;num++){
-       output += x
-  }
-  return output
-}
+// function sumAll (num){
+//   var output = 0
+//   for(var x = 0;x < num.legnth;num++){
+//        output += x
+//   }
+//   return output
+// }
 
+
+ function sumAll(){
+  var sum = 0;
+ for(var i = 0; i < arguments.length; i++){
+     sum += arguments[i]
+   }
+   return sum;
+ }
 
 /////
 //#3
 // Write a function called 'squaredTimesTen' that takes in array (that could contain any type of data), squares the numbers and multiples them by 10, and returns a new array of those numbers
 // const squaredTimesTen = () => null;
 
-var squaredTimesTen = function (agr){
-  for(var x = 0;x > agr.length; x++){
-     if(typeof(x) === string )
-      agr.filter(x)
-  }
+// var squaredTimesTen = function (agr){
+//   for(var x = 0;x > agr.length; x++){
+//      if(typeof(x) === 'string' )
+//       agr.filter(x)
+//   }
 
-  agr.forEach(function(a,b){
-     a * b
+//   agr.forEach(function(a,b){
+//      a * b
     
-  }
-     )
-   return agr
-}
+//   }
+//      )
+//    return agr
+// }
+
+ let squaredTimesTen = (arr) => {
+   let output = [];
+   arr.forEach((val) => {
+     if(typeof val === 'number') {
+       output.push((val**2) * 10)
+     }
+   })
+   return output
+ } 
+ 
+ squaredTimesTen([10, 10])
 
 
 
@@ -68,21 +88,28 @@ var squaredTimesTen = function (agr){
 //Write a function called 'highLow' that takes in an array of numbers and returns an object with both the highest and lowest number from the array
 // const highLow = () => null;
 
-function highLow (arr){
- var output = {
-   high:0,
-     low:0
-     }
- for(var x =0;x < arr.legnth;x++){
-    if(arr[x] > arr[x + 1]){
-      output.push(arr[x] = high : arr[x])
+// function highLow (arr){
+//  var output = {
+//    high:0,
+//      low:0
+//      }
+//  for(var x =0;x < arr.legnth;x++){
+//     if(arr[x] > arr[x + 1]){
+//       output.push(arr[x] = high : arr[x])
 
-    } else {
-      output.push(arr[x] = low: arr[x + 1])
-    }
+//     } else {
+//       output.push(arr[x] = low: arr[x + 1])
+//     }
+//  }
+//    return output
+// }
+
+function highLow (arr){
+   let output = {};
+  output["high"] = Math.max(...arr);
+  output["low"] = Math.min(...arr);
+   return output;
  }
-   return output
-}
 
 
 
@@ -91,12 +118,12 @@ function highLow (arr){
 //Write a function called `indexMap` that takes in an array of numbers and returns a new array with each of the original numbers multiplied by their array index.
 // const indexMap = () => null;
 
-function indexMap(arr){
-   arr.map(function(a,b){
-     arr.indexOf(a) * a
-    })
-   return arr
-}
+function indexMap =arr => 
+   arr.map(ele,idx){
+     ele * idx
+    }
+  
+
 
 
 /////
