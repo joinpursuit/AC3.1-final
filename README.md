@@ -1,4 +1,7 @@
 # JavaScript Fundamentals Final
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f76219ecfe4d4187a476fc5f7b5861)](https://www.codacy.com/app/nmadd/AC3-1-final?utm_source=github.com&utm_medium=referral&utm_content=C4Q/AC3.1-final&utm_campaign=badger)
+
 This is a closed book final - do not consult any notes, previous code, or other outside sources.
 
 ## Setup
